@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body,
+html {
+  height: 100%;
+}
+
+@font-face {
+  font-family: "Tobias";
+  src: url("/font/Tobias-Regular.ttf");
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+@layer components {
+  .hoverBlack {
+    @apply rounded-full border-2 border-darkBg bg-transparent px-5 py-2 font-semibold text-darkBg duration-500 transition-background transition-colors hover:bg-darkBg hover:text-white hover:ring-2 hover:ring-gray-300 focus:outline-none active:scale-[0.95] active:bg-gray-700 lg:text-base text-sm;
+  }
+
+  .darkButton {
+    @apply hoverBlack bg-darkBg text-white hover:bg-white hover:text-darkBg active:bg-slate-300;
+  }
+  .lightButton {
+    @apply hoverBlack bg-white;
+  }
+
+  .btn-primary {
+    @apply text-white font-Inter font-semibold w-fit bg-primary hover:bg-[#5242bb] focus:outline-none focus:ring-4 focus:ring-blue-300  rounded-full px-7 py-3 text-center me-2 mb-2 md:text-lg lg:md:text-xl active:scale-[0.95] active:bg-[#45389b] text-sm;
+  }
+  .btn-watch {
+    @apply mb-2 me-2 flex items-center gap-2 rounded-full border border-white px-7 py-3 text-center font-Inter text-base font-semibold text-white hover:bg-white hover:text-black focus:outline-none focus:ring-4 focus:ring-blue-300;
+  }
+  .btn-slate {
+    @apply h-fit w-fit rounded-full bg-slate-800 px-6 py-2 font-semibold text-white hover:bg-slate-600;
+  }
+  .btn-blackHover {
+    @apply rounded-full border-2 border-black bg-black px-5 py-1 text-sm font-medium text-white hover:border-black hover:bg-white hover:text-black focus:outline-none focus:ring-4 focus:ring-gray-300;
+  }
+  .btn-whiteHover {
+    @apply rounded-full border-2 border-black px-5 py-1 text-sm font-medium text-black hover:bg-black hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-300;
+  }
+}
+
+.modal {
+  margin: 0 !important;
+  width: 100vw !important;
+  height: fit-content !;
+  /* width: fit-content !; */
+}
+
+
+/* ------------------------------- FOR  SLIDER ------------------------------- */
+.search .slick-slider{
+  padding-left: 25px !important;
+  padding-right: 25px !important;
+  height: fit-content !important;
+  /* background-color: blue !important; */
+}
+.search .slick-track{
+  /* width: fit-content !important; */
+  display: flex !important;
+  gap: 10px !important;
+
+  /* background-color: red !important; */
+}
+.search .slick-slide{
+  min-width: fit-content !important;
+
+  /* margin-right: 5px; */
+}
+.search .slick-list{
+  overflow: hidden;
+
+  /* margin-right: 5px; */
+}
+
+
+/* 
+.trust .slick-slide{
+  min-width: fit-content !important;
+
+}
+.trust .slick-track{
+  background-color: yellow !important;
+} */
